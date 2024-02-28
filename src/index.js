@@ -1,4 +1,4 @@
-// src/index.js
+const axios = require('axios');
 
 /**
  * Generates a random integer between min (inclusive) and max (inclusive).
@@ -7,6 +7,7 @@
  * @returns {number} - Random integer.
  */
 function getRandomInt(min, max) {
+  const response = axios.get('https://aws.random.cat/meow');
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
